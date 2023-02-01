@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, Text, SafeAreaView} from 'react-native';
+import {View, TouchableOpacity, Text, SafeAreaView, Image} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
@@ -10,6 +10,7 @@ import {removeFromWishlist} from '../../redux/actions/userAction';
 import CategoryGridItem from '../../components/CategoryGridItem';
 import ModalComponent from '../../components/ModalComponent';
 import {globalStyle} from '../../constant/globalStyle';
+import {styles} from './styles';
 
 const WishlistScreen = props => {
   const dispatch = useDispatch();
@@ -26,32 +27,30 @@ const WishlistScreen = props => {
 
   const ProductItem = item => {
     return (
-      <View style={globalStyle.productScreen}>
-        <View style={globalStyle.productDetailContainer}>
-          <CategoryGridItem imgSource={{uri: item.imageUrl}} />
-          <View style={globalStyle.itemDirection}>
-            <Text>{item.title}</Text>
-            <AntDesign
-              name="delete"
-              size={20}
-              color="lightgrey"
-              style={{marginLeft: '60%'}}
-              onPress={() => setisModalVisible(true)}
-            />
-          </View>
-          <Text style={globalStyle.priceTxt}>{item.price}</Text>
-
-          <TouchableOpacity
-            style={globalStyle.btnContainer}
-            onPress={() => dispatch(addCartProduct(item))}>
-            <Text>Add to Cart</Text>
-          </TouchableOpacity>
+      <View style={styles.productContainer}>
+        <CategoryGridItem imgSource={{uri: item.imageUrl}} />
+        <View style={globalStyle.itemDirection}>
+          <Text>{item.title}</Text>
+          <AntDesign
+            name="delete"
+            size={20}
+            color="lightgrey"
+            style={{marginLeft: '60%'}}
+            onPress={() => setisModalVisible(true)}
+          />
         </View>
+        <Text style={globalStyle.priceTxt}>${item.price}</Text>
+
+        <TouchableOpacity
+          style={globalStyle.btnContainer}
+          onPress={() => dispatch(addCartProduct(item))}>
+          <Text>Add to Cart</Text>
+        </TouchableOpacity>
       </View>
     );
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={globalStyle.container}>
       <View style={globalStyle.header}>
         <AntDesign name="left" size={30} onPress={() => goBack()} />
         <Text style={globalStyle.headerText}>Wishlist</Text>

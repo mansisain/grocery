@@ -24,7 +24,12 @@
 
 |       |        |
 |------------|------------|
-|<img src="docs/cart.png" height="600" width="300"> | <img src="docs/profile.jpg" height="600" width="300">
+|<img src="docs/products.png" height="600" width="300"> | <img src="docs/cart.png" height="600" width="300">
+
+
+|       |        |
+|------------|------------|
+|<img src="docs/selectedaddress.png" height="600" width="300"> | <img src="docs/profile.png" height="600" width="300">
 
 
 
@@ -34,5 +39,5 @@
 
 ## How to Run 🚀
 - Clone the repo `git clone https://github.com/mansisain/grocery.git`
-- Install the dependicies `npm install or yarn install`
+- Install the dependencies `npm install or yarn install`
 - Run it `npm start or yarn start`

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "706234737189",
+    "project_id": "fir-43e71",
+    "storage_bucket": "fir-43e71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706234737189:android:b0f2101f23476e977755cc",
+        "android_client_info": {
+          "package_name": "com.grocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706234737189-6lld16t3c9uunjbo0biglhh6u77bvojd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHE--NpGpjk2_qcTVebZQJJvsBfDuZ2AQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706234737189-6lld16t3c9uunjbo0biglhh6u77bvojd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "706234737189-sdoiu9jhq4scdgldqu3v62tbjo8tr8fu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Grocery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
